@@ -1,21 +1,21 @@
 {
-  "name": "nom-nom",
+  "name": "glum",
   "version": "0.1.0",
   "description": "JS enums with type safety",
   "keywords": ["enum", "type-safety", "enums"],
-  "main": "dist/nom-nom.dev.js",
-  "browser": "dist/nom-nom.min.js",
-  "typings": "dist/nom-nom.d.ts",
-  "jsdelivr": "dist/nom-nom.min.js",
-  "unpkg": "dist/nom-nom.min.js",
+  "main": "dist/glum.dev.js",
+  "browser": "dist/glum.min.js",
+  "typings": "dist/glum.d.ts",
+  "jsdelivr": "dist/glum.min.js",
+  "unpkg": "dist/glum.min.js",
   "files": ["dist"],
   "author": "Ben Gubler <nebrelbug@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nebrelbug/nom-nom.git"
+    "url": "git+https://github.com/nebrelbug/glum.git"
   },
   "bugs": {
-    "url": "https://github.com/nebrelbug/nom-nom/issues"
+    "url": "https://github.com/nebrelbug/glum/issues"
   },
   "license": "MIT",
   "engines": {

@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.NomNom = factory());
+  (global = global || self, global.Glum = factory());
 }(this, (function () { 'use strict';
 
   var NomNom = /** @class */ (function () {
@@ -41,4 +41,4 @@
   return NomNom;
 
 })));
-//# sourceMappingURL=nom-nom.dev.js.map
+//# sourceMappingURL=glum.dev.js.map

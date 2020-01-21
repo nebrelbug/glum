@@ -10,24 +10,20 @@ export default [
     input: 'src/index.ts', // todo: use rollup-plugin-replace
     output: [
       {
-        file: 'dist/nom-nom.dev.js',
+        file: 'dist/glum.dev.js',
         format: 'umd',
-        name: 'NomNom',
+        name: 'Glum',
         sourcemap: true
       },
       {
-        file: 'dist/nom-nom.min.js',
+        file: 'dist/glum.min.js',
         format: 'umd',
-        name: 'NomNom',
+        name: 'Glum',
         sourcemap: true,
         plugins: [terser()]
       }
     ],
-    plugins: [
-      typescript({ useTsconfigDeclarationDir: true }),
-      commonjs(),
-      resolve()
-    ],
+    plugins: [typescript({ useTsconfigDeclarationDir: true }), commonjs(), resolve()],
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
     external: [],
     watch: {

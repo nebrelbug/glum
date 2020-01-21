@@ -1,14 +1,14 @@
-# nom-nom
+# glum
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Travis](https://img.shields.io/travis/nebrelbug/nom-nom.svg)](https://travis-ci.org/nebrelbug/nom-nom)
-[![Coveralls](https://img.shields.io/coveralls/nebrelbug/nom-nom.svg)](https://coveralls.io/github/nebrelbug/nom-nom)
-[![Dev Dependencies](https://img.shields.io/david/dev/nebrelbug/nom-nom)](https://david-dm.org/nebrelbug/nom-nom?type=dev)
+[![Travis](https://img.shields.io/travis/nebrelbug/glum.svg)](https://travis-ci.org/nebrelbug/glum)
+[![Coveralls](https://img.shields.io/coveralls/nebrelbug/glum.svg)](https://coveralls.io/github/nebrelbug/glum)
+[![Dev Dependencies](https://img.shields.io/david/dev/nebrelbug/glum)](https://david-dm.org/nebrelbug/glum?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/bengubler)
 
 **Summary**
 
-Nom-nom is a super lightweight Enum library that makes use of Symbols to achieve type-safety.
+glum is a super lightweight Enum library that makes use of Symbols to achieve type-safety.
 
 _What if my environment doesn't support ES6?_
 
@@ -24,13 +24,13 @@ If you're running in Node, chances are that Symbols are supported: they're suppo
 ### Installation
 
 ```
-npm install nom-nom
+npm install glum
 ```
 
 Or, if in a browser,
 
 ```
-<script crossorigin src="https://cdn.jsdelivr.net/npm/nom-nom"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/glum"></script>
 ```
 
 [Note: this will create a global variable called NomNom]
@@ -40,8 +40,8 @@ Or, if in a browser,
 We distribute a UMD build, so you can use it with ES modules, CommonJS, AMD, or in the browser
 
 ```js
-import Enum from 'nom-nom'
-// or var Enum = require 'nom-nom'
+import Enum from 'glum'
+// or var Enum = require 'glum'
 
 let FRUIT = new Enum('APPLE', 'ORANGE', 'PEAR')
 
@@ -58,7 +58,7 @@ console.log(FRUIT.getName(FRUIT.APPLE)) // APPLE
 
 Tests can be run with `npm test`. Multiple tests check that things return expected results, formatting follows guidelines, and code coverage is at the expected level.
 
-## Projects using `nom-nom`
+## Projects using `glum`
 
 Create an issue to add yours!
 

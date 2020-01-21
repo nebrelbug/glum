@@ -1,23 +1,14 @@
 {
-  "name": "squirrelly-next",
-  "version": "0.0.0",
-  "description": "Lightweight, fast, and powerful JS template engine. Supports helpers, filters, template inheritance",
-  "keywords": [
-    "squirrelly",
-    "helpers",
-    "template inheritance",
-    "handlebars",
-    "template engine"
-  ],
+  "name": "nom-nom",
+  "version": "0.1.0",
+  "description": "JS enums with type safety",
+  "keywords": ["enum", "type-safety", "enums"],
   "main": "dist/nom-nom.dev.js",
   "browser": "dist/nom-nom.min.js",
-  "module": "dist/nom-nom.es.js",
   "typings": "dist/nom-nom.d.ts",
   "jsdelivr": "dist/nom-nom.min.js",
   "unpkg": "dist/nom-nom.min.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "author": "Ben Gubler <nebrelbug@gmail.com>",
   "repository": {
     "type": "git",
@@ -45,10 +36,7 @@
     "format": "prettier-standard --format '{src,test}/**/*.ts'"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "prettier-standard --lint",
-      "git add"
-    ]
+    "{src,test}/**/*.ts": ["prettier-standard --lint", "git add"]
   },
   "config": {
     "commitizen": {
@@ -61,14 +49,8 @@
     },
     "testEnvironment": "node",
     "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
-    ],
+    "moduleFileExtensions": ["ts", "js"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
     "coverageThreshold": {
       "global": {
         "branches": 90,
@@ -77,23 +59,17 @@
         "statements": 95
       }
     },
-    "collectCoverageFrom": [
-      "src/*.{js,ts}"
-    ]
+    "collectCoverageFrom": ["src/*.{js,ts}"]
   },
   "standard": {
-    "ignore": [
-      "dist"
-    ]
+    "ignore": ["dist"]
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "extends": ["@commitlint/config-conventional"]
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",

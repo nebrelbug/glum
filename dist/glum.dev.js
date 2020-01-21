@@ -4,8 +4,8 @@
   (global = global || self, global.Glum = factory());
 }(this, (function () { 'use strict';
 
-  var NomNom = /** @class */ (function () {
-      function NomNom() {
+  var Glum = /** @class */ (function () {
+      function Glum() {
           if (arguments.length === 0) {
               throw Error('Must provide at least one argument');
           }
@@ -29,16 +29,16 @@
           }
           Object.freeze(this);
       }
-      NomNom.prototype.getName = function (sym) {
+      Glum.prototype.getName = function (sym) {
           if (typeof sym !== 'symbol') {
               throw Error('Argument must be a symbol');
           }
           return this.nameMap[sym];
       };
-      return NomNom;
+      return Glum;
   }());
 
-  return NomNom;
+  return Glum;
 
 })));
 //# sourceMappingURL=glum.dev.js.map

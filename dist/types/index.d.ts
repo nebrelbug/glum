@@ -1,4 +1,4 @@
-export default class NomNom {
+export default class Glum {
     size: number;
     values: Array<Symbol>;
     nameMap: {

@@ -33,7 +33,7 @@ Or, if in a browser,
 <script crossorigin src="https://cdn.jsdelivr.net/npm/glum"></script>
 ```
 
-[Note: this will create a global variable called NomNom]
+[Note: this will create a global variable called Glum]
 
 ### Usage
 

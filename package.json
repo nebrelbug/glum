@@ -2,7 +2,7 @@
   "name": "glum",
   "version": "0.1.0",
   "description": "JS enums with type safety",
-  "keywords": ["enum", "type-safety", "enums"],
+  "keywords": ["enum", "type-safety", "enums", "glum enum"],
   "main": "dist/glum.dev.js",
   "browser": "dist/glum.min.js",
   "typings": "dist/glum.d.ts",

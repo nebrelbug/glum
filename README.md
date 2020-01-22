@@ -1,7 +1,7 @@
 # glum
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Travis](https://img.shields.io/travis/nebrelbug/glum.svg)](https://travis-ci.org/nebrelbug/glum)
+[![Travis](https://img.shields.io/travis/com/nebrelbug/glum/master.svg)](https://travis-ci.com/nebrelbug/glum)
 [![Coveralls](https://img.shields.io/coveralls/nebrelbug/glum.svg)](https://coveralls.io/github/nebrelbug/glum)
 [![Dev Dependencies](https://img.shields.io/david/dev/nebrelbug/glum)](https://david-dm.org/nebrelbug/glum?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/bengubler)

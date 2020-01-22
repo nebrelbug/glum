@@ -35,6 +35,35 @@ describe('Methods', () => {
 
     expect(x.getName(x.HI)).toEqual('HI')
   })
+
+  it('Enum.has works', () => {
+    let x = new Enum('HEY', 'HI', 'HALLO')
+
+    expect(x.has(x.HEY)).toEqual(true)
+    expect(x.has(x.HOLA)).toEqual(false)
+  })
+
+  it('Symbol polyfill works', () => {
+    let SymbolPolyfill = function (strn: string) {
+      return '@@_Symbol:' + strn
+    }
+
+    let oldSymbol = Symbol
+
+    Object.defineProperty(global, 'Symbol', { value: undefined, configurable: true })
+
+    let x = new Enum('HEY', 'HI', 'HALLO', SymbolPolyfill)
+
+    expect(x.HEY).toEqual('@@_Symbol:HEY')
+
+    console.log(x.HEY)
+
+    Object.defineProperty(global, 'Symbol', {
+      value: oldSymbol,
+      configurable: true,
+      writable: true
+    })
+  })
 })
 
 describe('Things error when they should', () => {
@@ -62,6 +91,17 @@ describe('Things error when they should', () => {
       let x = new Enum('HEY', 'HI', 'HALLO')
       x.YOYO = 'HIEG'
       x.HEY = 3
+    }).toThrow()
+  })
+
+  it('No Symbol support w/out polyfill', () => {
+    expect(function () {
+      Object.defineProperty(global, 'Symbol', { value: undefined, configurable: true })
+      console.log(Symbol)
+      let x = new Enum('HEY', 'HI', 'HALLO')
+      console.log(x.HEY)
+
+      // Object.defineProperty(global, 'Symbol', { value: oldSymbol, configurable: true })
     }).toThrow()
   })
 })

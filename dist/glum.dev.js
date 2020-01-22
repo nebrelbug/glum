@@ -12,12 +12,24 @@
           this.size = arguments.length;
           this.values = [];
           this.nameMap = {};
-          for (var i = 0; i < arguments.length; i++) {
+          var subtract = 0;
+          var SymbolMaker = Symbol;
+          if (!Symbol || typeof Symbol !== 'function') {
+              console.log("Symbol doesn't exist");
+              if (typeof arguments[arguments.length - 1] === 'function') {
+                  SymbolMaker = arguments[arguments.length - 1];
+                  subtract = 1;
+              }
+              else {
+                  throw Error("This env doesn't support Symbol. You must provide a polyfill");
+              }
+          }
+          for (var i = 0; i < arguments.length - subtract; i++) {
               var name = arguments[i];
               if (typeof name !== 'string') {
                   throw Error('Enum names must be strings');
               }
-              var sym = Symbol('name');
+              var sym = SymbolMaker(name);
               Object.defineProperty(this, name, {
                   enumerable: true,
                   writable: false,
@@ -30,10 +42,14 @@
           Object.freeze(this);
       }
       Glum.prototype.getName = function (sym) {
-          if (typeof sym !== 'symbol') {
-              throw Error('Argument must be a symbol');
+          if (!this.nameMap[sym]) {
+              throw Error("Enum doesn't contain that member");
           }
           return this.nameMap[sym];
+      };
+      Glum.prototype.has = function (key) {
+          // coerce the value to a boolean
+          return !!this.nameMap[key];
       };
       return Glum;
   }());

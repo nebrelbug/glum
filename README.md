@@ -15,9 +15,10 @@ _What if my environment doesn't support ES6?_
 If you're in a browser, use a polyfill.
 If you're running in Node, chances are that Symbols are supported: they're supported in all versions after 5.12.0.
 
-### 🌟 Features
-
+**Why use Glum?**
 - Type-safety. When you declare an Enum, members are unique and can't be mimicked by strings, numbers, etc.
+- Allows for passing in polyfills
+- Don't reinvent the wheel
 
 ## :scroll: Docs
 

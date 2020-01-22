@@ -14,6 +14,7 @@
           this.nameMap = {};
           var subtract = 0;
           var SymbolMaker = Symbol;
+          // tslint:disable-next-line:strict-type-predicates
           if (!Symbol || typeof Symbol !== 'function') {
               console.log("Symbol doesn't exist");
               if (typeof arguments[arguments.length - 1] === 'function') {

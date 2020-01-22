@@ -16,6 +16,7 @@ If you're in a browser, use a polyfill.
 If you're running in Node, chances are that Symbols are supported: they're supported in all versions after 5.12.0.
 
 **Why use Glum?**
+
 - Type-safety. When you declare an Enum, members are unique and can't be mimicked by strings, numbers, etc.
 - Allows for passing in polyfills
 - Don't reinvent the wheel
@@ -53,6 +54,35 @@ function nameFruit (fruit) {
 }
 
 console.log(FRUIT.getName(FRUIT.APPLE)) // APPLE
+```
+
+### API
+
+#### `new Enum(... enumNames, [symbolPolyfill])`
+
+Create a new Enum.
+_Ex._ `let fruits = new Enum("APPLE", "ORANGE", "PEAR")`
+_Ex. with polyfill_ `let fruits = new Enum("APPLE", "ORANGE", "PEAR", function(name) {return '@@\_Symbol:' + name})`
+
+#### `Enum.has(member)`
+
+Check if a member is part of an enum. **Note:** this will primarily be used to accept function parameters, variables, etc. that must be a member of a certain enum.
+_Ex._
+
+```js
+let fruits = new Enum('APPLE', 'ORANGE', 'PEAR')
+fruits.has(fruits.APPLE) // true
+fruits.has(fruits.HI) // false
+```
+
+#### `Enum.getName(member)`
+
+Get the name of an enum member. **Note:** this is usually used to get the name of an Enum member passed as a parameter, variable, etc.
+_Ex._
+
+```js
+let fruits = new Enum('APPLE', 'ORANGE', 'PEAR')
+fruits.getName(fruits.APPLE) // "APPLE"
 ```
 
 ## :heavy_check_mark: Tests

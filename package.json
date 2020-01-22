@@ -1,14 +1,21 @@
 {
   "name": "glum",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JS enums with type safety",
-  "keywords": ["enum", "type-safety", "enums", "glum enum"],
+  "keywords": [
+    "enum",
+    "type-safety",
+    "enums",
+    "glum enum"
+  ],
   "main": "dist/glum.dev.js",
   "browser": "dist/glum.min.js",
   "typings": "dist/glum.d.ts",
   "jsdelivr": "dist/glum.min.js",
   "unpkg": "dist/glum.min.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "Ben Gubler <nebrelbug@gmail.com>",
   "repository": {
     "type": "git",
@@ -36,7 +43,10 @@
     "format": "prettier-standard --format '{src,test}/**/*.ts'"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": ["prettier-standard --lint", "git add"]
+    "{src,test}/**/*.ts": [
+      "prettier-standard --lint",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
@@ -49,8 +59,14 @@
     },
     "testEnvironment": "node",
     "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|js)$",
-    "moduleFileExtensions": ["ts", "js"],
-    "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 90,
@@ -59,17 +75,23 @@
         "statements": 95
       }
     },
-    "collectCoverageFrom": ["src/*.{js,ts}"]
+    "collectCoverageFrom": [
+      "src/*.{js,ts}"
+    ]
   },
   "standard": {
-    "ignore": ["dist"]
+    "ignore": [
+      "dist"
+    ]
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
